@@ -12,9 +12,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
-        <div className="pt-16">
-          {" "}
+        {/* <Navbar /> */}
+        <div>
           {/* Adjust padding to match Navbar height */}
           <Routes>
             <Route path="/" element={<Home />} />

@@ -1,33 +1,38 @@
 import React from "react";
 import { Vortex } from "../vortex";
+import Socialmedia from "./Socialmedia";
 
 function HeroSection() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between max-w-7xl mx-auto px-6 min-h-screen">
+    <section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10">
       <Vortex
         backgroundColor="black"
         rangeY={800}
         particleCount={300}
         baseHue={270}
-        className="flex items-center flex-col justify-center px-2 md:px-10  py-4 w-full h-full"
+        className="w-full h-full flex flex-col-reverse md:flex-row items-center justify-between max-w-7xl mx-auto py-10"
       >
         {/* Left Side - Text */}
-        <div className="text-center md:text-left md:w-1/2">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">
-            Hi, I’m <span className="">Aditika Singh</span>
+        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left gap-4 mt-10 md:mt-0">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+            Hi, I'm <span className="text-pink-400">Aditika Singh</span>
           </h1>
-          <p className="mt-4 text-gray-600">
+
+          <p className="text-gray-300 text-base sm:text-lg max-w-md">
             A passionate developer focused on crafting clean, user-friendly
             experiences.
           </p>
+          <div>
+            <Socialmedia />
+          </div>
         </div>
 
         {/* Right Side - Image */}
-        <div className="mt-10 md:mt-0 md:w-1/2 flex justify-center">
+        <div className="w-full md:w-1/2 flex justify-center bg-slate-50 items-center">
           <img
             src="https://via.placeholder.com/300"
             alt="Adi Singh"
-            className="w-64 h-64 object-cover rounded-full shadow-md"
+            className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover shadow-lg"
           />
         </div>
       </Vortex>
