@@ -1,5 +1,5 @@
 import React from "react";
-import { Vortex } from "../vortex";
+import { Vortex } from "../ui/vortex";
 import { motion } from "framer-motion";
 import Socialmedia from "./Socialmedia";
 
