@@ -62,7 +62,12 @@ function Navbar() {
             >
               Projects
             </button>
-
+            <button
+              onClick={() => scrollToSection("work")}
+              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_#ff1aff]"
+            >
+              Work Experience
+            </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_#ff1aff]"

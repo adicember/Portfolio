@@ -6,6 +6,7 @@ import Projects from "../Projects/Projects";
 import KnowMeMore from "../KnowMeMore/KnowMeMore";
 import ContactMe from "../ContactMe/ContactMe";
 import WorkExperience from "../WorkExperience/WorkExperience";
+import Education from "../Education/Education";
 
 function Home() {
   return (
@@ -15,7 +16,9 @@ function Home() {
       <SkillsSection />
       <Projects />
       <WorkExperience />
+      <Education />
       <ContactMe />
+
       {/* <KnowMeMore /> */}
     </div>
   );
