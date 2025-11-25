@@ -1,46 +1,88 @@
 import React from "react";
 import { motion } from "framer-motion";
+import {
+  GraduationCap,
+  BookOpen,
+  MapPin,
+  Calendar,
+  Trophy,
+} from "lucide-react";
 
 export default function Education() {
   const educationData = [
     {
-      degree: "Bachelor of Science in Computer Science",
-      school: "ABC University",
-      year: "2020 - Present",
-      description: "Focused on software engineering, web development, and AI applications.",
+      degree:
+        "Bachelor of Science in Computer Science and Information Technology",
+      school: "Prime College, Tribhuvan University",
+      location: "Kathmandu, Nepal",
+      year: "2021 - 2023",
     },
     {
-      degree: "High School (+2) Science",
-      school: "XYZ College",
-      year: "2018 - 2020",
-      description: "Majored in Physics, Chemistry, Mathematics, and Computer Science.",
+      degree: "Higher Secondary Education (+2), Science Stream",
+      school: "Little Angels' College",
+      location: "Kathmandu, Nepal",
+      year: "2017 - 2021",
     },
   ];
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 bg-black text-white">
-      <motion.h2
+    <section
+      id="education"
+      className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-black text-white"
+    >
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl font-bold mb-12 text-center"
+        className="text-center mb-16"
       >
-        Education
-      </motion.h2>
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <h2 className="text-5xl md:text-6xl font-bold">
+            <span className="text-pink-500">Education</span>
+          </h2>
+          {/* <Trophy className="w-12 h-12 text-pink-500" /> */}
+        </div>
+        <p className="text-gray-400 text-lg"></p>
+      </motion.div>
 
-      <div className="max-w-3xl w-full space-y-10">
+      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-8 ">
         {educationData.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-white/10 p-6 rounded-2xl shadow-xl backdrop-blur-lg border border-white/20"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            className="relative bg-gradient-to-br from-purple-900/30 to-pink-900/20 p-8 rounded-3xl backdrop-blur-lg border-2 border-pink-500/30 hover:border-pink-500/60 transition-all duration-300"
           >
-            <h3 className="text-2xl font-semibold">{item.degree}</h3>
-            <p className="text-lg text-gray-300">{item.school}</p>
-            <p className="text-sm text-gray-400 mb-3">{item.year}</p>
-            <p className="text-gray-300 leading-relaxed">{item.description}</p>
+            {/* Icon and Rating */}
+            <div className="flex items-start justify-between mb-6 bg-">
+              <div className="bg-pink-500 p-4 rounded-2xl">
+                <GraduationCap className="w-8 h-8 text-white" />
+              </div>
+            </div>
+
+            {/* Degree Info */}
+            <div className=" flex flex-col">
+              <h3 className="text-2xl text-left md:text-3xl font-bold mb-3 min-h-20 md:min-h-28 leading-snug">
+                {item.degree}
+              </h3>
+
+              {/* Details */}
+              <div className="space-y-3 bg-black/40 p-6 rounded-2xl">
+                <div className="flex items-center gap-3 text-gray-300 text-left">
+                  <BookOpen className="w-5 h-5 text-pink-400" />
+                  <span>{item.school}</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-300 text-left">
+                  <MapPin className="w-5 h-5 text-pink-400" />
+                  <span>{item.location}</span>
+                </div>
+                <div className="flex items-center gap-3 text-gray-300 text-left">
+                  <Calendar className="w-5 h-5 text-pink-400" />
+                  <span>{item.year}</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
         ))}
       </div>

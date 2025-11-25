@@ -18,7 +18,6 @@ function HeroSection() {
       >
         {/* Left Side */}
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left gap-4 mt-10 md:mt-0">
-
           {/* Animated Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -38,10 +37,6 @@ function HeroSection() {
           >
             <span className="typing-text">Frontend Engineer</span>
           </motion.p>
-
-          <div>
-            <Socialmedia />
-          </div>
         </div>
 
         {/* Right Side (Image If Needed Later) */}
