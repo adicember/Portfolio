@@ -39,11 +39,11 @@ function WorkExperience() {
 
   return (
     <section id="work">
-      <div className="min-h-screen bg-black text-white py-16 px-4">
+      <div className=" bg-black text-white py-20 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold text-pink-500 mb-2">
+            <h1 className="text-4xl font-bold text-pink-400 mb-16 drop-shadow-[0_0_15px_rgba(255,20,147,0.7)]">
               Work Experience
             </h1>
           </div>

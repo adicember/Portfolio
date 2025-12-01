@@ -3,8 +3,25 @@ import arogya from "../../Assets/img/Arogya.png";
 import swachgyan from "../../Assets/img/Swachyan.png";
 import ictv8 from "../../Assets/img/ICTv8.png";
 import hackaversev2 from "../../Assets/img/Hackaverse.png";
-
+import webgis from "../../Assets/img/webgis.png";
+import esewa from "../../Assets/img/esewa.png";
 const projectsData = [
+  {
+    title: "BizMap : Web GIS Platform",
+    description:
+      "A Web GIS platform with interactive maps, financial and hazard visualizations, role-based user management, and location plotting through file uploads.",
+    image: webgis,
+    tech: ["React JS", "Tailwind CSS", "MapLibre"],
+    showLink: false,
+  },
+  {
+    title: "eSewa Area Representative System",
+    description:
+      "The eSewa Area Representative System manages field operations, including task assignment, QR-based merchant enrollment, and real-time route tracking. It enables ARs, Supervisors, and Admins to monitor activities, verify merchants, and generate reports efficiently.",
+    image: esewa,
+    tech: ["React JS", "Tailwind CSS", "MapLibre"],
+    showLink: false,
+  },
   {
     title: "Arogya: PCOS Detection",
     description:
@@ -43,11 +60,11 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col items-center bg-black px-6 py-16"
+      className="min-h-screen flex flex-col items-center bg-black px-6 py-20"
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-10">
+      <h1 className="text-4xl font-bold text-pink-400 mb-16 drop-shadow-[0_0_15px_rgba(255,20,147,0.7)]">
         Projects
-      </h2>
+      </h1>
 
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full">
@@ -128,24 +145,26 @@ function Projects() {
                   ))}
                 </div>
 
-                <div className="border-t border-white/10 pt-6 mt-auto">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                      flex items-center justify-center
-                      text-pink-400
-                      transition-all duration-300
-                      group-hover:text-pink-300
-                      group-hover:translate-x-1
-                      font-medium text-sm
-                    "
-                  >
-                    View Project
-                    <span className="ml-2">→</span>
-                  </a>
-                </div>
+                {project.showLink !== false && (
+                  <div className="border-t border-white/10 pt-6 mt-auto">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
+        flex items-center justify-center
+        text-pink-400
+        transition-all duration-300
+        group-hover:text-pink-300
+        group-hover:translate-x-1
+        font-medium text-sm
+      "
+                    >
+                      View Project
+                      <span className="ml-2">→</span>
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           </div>

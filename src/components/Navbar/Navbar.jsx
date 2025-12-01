@@ -24,6 +24,21 @@ function Navbar() {
     }
   };
 
+  // 🔥 Unified nav config for BOTH desktop & mobile
+  const navItems = [
+    { id: "about", label: "About", icon: <User size={22} /> },
+    { id: "skills", label: "Skills", icon: <Sparkles size={18} /> },
+    { id: "projects", label: "Projects", icon: <FolderKanban size={22} /> },
+    {
+      id: "work",
+      label: "Work Experience",
+      icon: <Briefcase size={18} />,
+    },
+    { id: "education", label: "Education", icon: <GraduationCap size={18} /> },
+    { id: "leadership", label: "Leadership", icon: <Medal size={18} /> },
+    { id: "contact", label: "Contact", icon: <Mail size={22} /> },
+  ];
+
   return (
     <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full flex justify-center">
       <div className="relative rounded-full p-[2px]">
@@ -52,20 +67,12 @@ function Navbar() {
             overflow-hidden
           "
         >
-          {/* Desktop View */}
+          {/* 🖥️ Desktop View */}
           <div className="hidden md:flex gap-8 lg:gap-10 font-medium whitespace-nowrap">
-            {[
-              "about",
-              "skills",
-              "projects",
-              "work",
-              "education",
-              "achievements",
-              "contact",
-            ].map((item) => (
+            {navItems.map((item) => (
               <button
-                key={item}
-                onClick={() => scrollToSection(item)}
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
                 className="
                   text-white/80 
                   hover:text-pink-400 
@@ -77,36 +84,26 @@ function Navbar() {
                   tracking-tight
                 "
               >
-                {item === "work"
-                  ? "Work Experience"
-                  : item.charAt(0).toUpperCase() + item.slice(1)}
+                {item.label}
               </button>
             ))}
           </div>
 
-          {/* Mobile Icons */}
+          {/* 📱 Mobile Icons */}
           <div className="flex md:hidden gap-6">
-            <button onClick={() => scrollToSection("about")} className="text-white/80 hover:text-pink-400 hover:scale-125">
-              <User size={22} />
-            </button>
-            <button onClick={() => scrollToSection("skills")} className="text-white/80 hover:text-pink-400 hover:scale-125">
-              <Sparkles size={18} />
-            </button>
-            <button onClick={() => scrollToSection("projects")} className="text-white/80 hover:text-pink-400 hover:scale-125">
-              <FolderKanban size={22} />
-            </button>
-            <button onClick={() => scrollToSection("work")} className="text-white/80 hover:text-pink-400 hover:scale-125">
-              <Briefcase size={18} />
-            </button>
-            <button onClick={() => scrollToSection("education")} className="text-white/80 hover:text-pink-400 hover:scale-125">
-              <GraduationCap size={18} />
-            </button>
-            <button onClick={() => scrollToSection("leadership")} className="text-white/80 hover:text-pink-400 hover:scale-125">
-              <Medal size={18} />
-            </button>
-            <button onClick={() => scrollToSection("contact")} className="text-white/80 hover:text-pink-400 hover:scale-125">
-              <Mail size={22} />
-            </button>
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="
+                  text-white/80 
+                  hover:text-pink-400 
+                  hover:scale-125
+                "
+              >
+                {item.icon}
+              </button>
+            ))}
           </div>
         </div>
       </div>

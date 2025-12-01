@@ -40,29 +40,21 @@
   scrollbar-width: none;
 }
 
-.typing-text {
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  overflow: hidden;
+.cursor-line {
   display: inline-block;
-  animation: typing 3s steps(30), blink .7s step-end infinite alternate;
+  margin-left: 4px;
+  animation: blink .7s step-end infinite alternate;
+  color: #fff;
+  font-weight: 300;
 }
 
-@keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
-}
-
+/* Blink animation */
 @keyframes blink {
   50% {
-    border-color: transparent
+    opacity: 0;
   }
 }
+
 
 body {
   margin: 0;

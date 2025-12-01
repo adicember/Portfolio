@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Vortex } from "../ui/vortex";
 import { motion } from "framer-motion";
 import Socialmedia from "./Socialmedia";
-
+import { FileDown } from "lucide-react";
+import CV from "../../Assets/pdf/Aditika_Singh_CV.pdf";
 function HeroSection() {
   const [screenKey, setScreenKey] = useState(0);
 
@@ -27,7 +28,7 @@ function HeroSection() {
         className="w-full h-full flex flex-col-reverse md:flex-row items-center justify-between max-w-7xl mx-auto py-10"
       >
         {/* Left Side */}
-        <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left gap-4 mt-10 md:mt-0">
+        <div className="w-full flex flex-col items-center text-center gap-4 mt-10">
           {/* Animated Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -40,25 +41,45 @@ function HeroSection() {
 
           {/* Typewriter Role Animation */}
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            className="text-gray-300 text-lg sm:text-lg max-w-md"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-gray-300 text-lg sm:text-xl max-w-xl leading-relaxed flex"
           >
-            <span className="typing-text">Frontend Engineer</span>
-          </motion.p>
-        </div>
+            <span>
+              As a front-end engineer, I craft clean, modular, and scalable user
+              interfaces using modern web technologies. I focus on usability,
+              responsiveness, and performance to deliver seamless digital
+              experiences.<span className="cursor-line">|</span>
+            </span>
 
-        {/* Right Side (Image If Needed Later) */}
-        {/* 
-        <div className="w-full md:w-1/2 flex justify-center items-center">
-          <img
-            src="https://via.placeholder.com/300"
-            alt="Adi Singh"
-            className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full object-cover shadow-lg"
-          />
-        </div> 
-        */}
+            {/* Cursor */}
+          </motion.p>
+          <a
+            href={CV}
+            target="_blank"
+            rel="noopener noreferrer"
+            download
+            className="
+    group
+    w-fit
+    bg-gradient-to-r from-pink-500 to-pink-600
+    hover:from-pink-600 hover:to-pink-700
+    text-white
+    font-semibold
+    rounded-2xl
+    px-8 py-4
+    flex items-center justify-center gap-2
+    transition-all
+    shadow-[0_0_25px_rgba(236,72,153,0.3)]
+    hover:shadow-[0_0_35px_rgba(236,72,153,0.5)]
+    mt-4
+  "
+          >
+            Download CV
+            <FileDown className="w-5 h-5 group-hover:scale-110 transition-all duration-300" />
+          </a>
+        </div>
       </Vortex>
     </section>
   );

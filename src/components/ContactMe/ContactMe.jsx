@@ -13,6 +13,27 @@ function ContactMe() {
   const handleSubmit = () => {
     // Handle form submission here
     console.log("Form submitted:", formData);
+    emailjs
+      .send(
+        "service_pli345w", // Service ID
+        "template_816v6nh", // Template ID
+        {
+          name: formData.name, // matches {{name}}
+          email: formData.email, // matches {{email}}
+          message: formData.message, // matches {{message}}
+        },
+        "26KkTs-3_uaJbxbGW" // Public Key
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (err) => {
+          alert("Failed to send message.");
+          console.error(err);
+        }
+      );
   };
 
   const handleChange = (e) => {

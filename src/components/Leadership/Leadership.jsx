@@ -19,9 +19,9 @@ export default function Leadership() {
       id="leadership"
       className="py-20 px-6 md:px-16 text-white bg-black"
     >
-      <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">
+      <h1 className="text-4xl font-bold text-pink-400 mb-16 drop-shadow-[0_0_15px_rgba(255,20,147,0.7)] text-center">
         Leadership & Achievements
-      </h2>
+      </h1>
 
       <div className="flex flex-col gap-6 max-w-2xl mx-auto">
         {items.map((item, index) => (

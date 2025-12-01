@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  GraduationCap,
-  BookOpen,
-  MapPin,
-  Calendar,
-} from "lucide-react";
+import { GraduationCap, BookOpen, MapPin, Calendar } from "lucide-react";
 
 export default function Education() {
   const educationData = [
@@ -14,32 +9,32 @@ export default function Education() {
         "Bachelor of Science in Computer Science and Information Technology",
       school: "Prime College, Tribhuvan University",
       location: "Kathmandu, Nepal",
-      year: "2021 - 2023",
+      year: "2021 - 2025",
     },
     {
       degree: "Higher Secondary Education (+2), Science Stream",
       school: "Little Angels' College",
       location: "Kathmandu, Nepal",
-      year: "2017 - 2021",
+      year: "2018 - 2021",
     },
   ];
 
   return (
     <section
       id="education"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-black text-white"
+      className=" flex flex-col items-center justify-center px-6 py-20 bg-black text-white"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center mb-16"
+        className="text-center "
       >
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <h2 className="text-5xl md:text-6xl font-bold">
-            <span className="text-pink-500">Education</span>
-          </h2>
+        <div className="flex items-center justify-center gap-3 ">
+          <h1 className="text-4xl font-bold text-pink-400 mb-16 drop-shadow-[0_0_15px_rgba(255,20,147,0.7)] mb-16">
+            <span>Education</span>
+          </h1>
         </div>
       </motion.div>
 
