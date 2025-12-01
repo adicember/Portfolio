@@ -1,15 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Vortex } from "../ui/vortex";
 import { motion } from "framer-motion";
 import Socialmedia from "./Socialmedia";
 
 function HeroSection() {
+  const [screenKey, setScreenKey] = useState(0);
+
+  useEffect(() => {
+    const update = () => {
+      setScreenKey((prev) => prev + 1);
+    };
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
   return (
     <section
       id="about"
       className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-10"
     >
       <Vortex
+        key={screenKey}
         backgroundColor="black"
         rangeY={800}
         particleCount={300}

@@ -1,7 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { User, Cpu, FolderKanban, Mail } from "lucide-react";
+import {
+  User,
+  Sparkles,
+  FolderKanban,
+  Briefcase,
+  GraduationCap,
+  Mail,
+} from "lucide-react";
+
 import { GlowingEffect } from "../ui/glowing-effect";
 
 function Navbar() {
@@ -84,6 +92,7 @@ function Navbar() {
 
           {/* Mobile View (Icons Only) */}
           <div className="flex md:hidden gap-6">
+            {/* about */}
             <button
               onClick={() => scrollToSection("about")}
               className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
@@ -91,13 +100,15 @@ function Navbar() {
               <User size={22} />
             </button>
 
+            {/* skills */}
             <button
               onClick={() => scrollToSection("skills")}
               className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
             >
-              <Cpu size={22} />
+              <Sparkles size={18} />
             </button>
 
+            {/* projects */}
             <button
               onClick={() => scrollToSection("projects")}
               className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
@@ -105,6 +116,23 @@ function Navbar() {
               <FolderKanban size={22} />
             </button>
 
+            {/* work */}
+            <button
+              onClick={() => scrollToSection("work")}
+              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
+            >
+              <Briefcase size={18} />
+            </button>
+
+            {/* education */}
+            <button
+              onClick={() => scrollToSection("education")}
+              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
+            >
+              <GraduationCap size={18} />
+            </button>
+
+            {/* contact */}
             <button
               onClick={() => scrollToSection("contact")}
               className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
