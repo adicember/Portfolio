@@ -55,11 +55,34 @@ function HeroSection() {
 
             {/* Cursor */}
           </motion.p>
-          <a
+          {/* <a
             href={CV}
             target="_blank"
             rel="noopener noreferrer"
             download
+            className="
+    group
+    w-fit
+    bg-gradient-to-r from-pink-500 to-pink-600
+    hover:from-pink-600 hover:to-pink-700
+    text-white
+    font-semibold
+    rounded-2xl
+    px-8 py-4
+    flex items-center justify-center gap-2
+    transition-all
+    shadow-[0_0_25px_rgba(236,72,153,0.3)]
+    hover:shadow-[0_0_35px_rgba(236,72,153,0.5)]
+    mt-4
+  "
+          >
+            Download CV
+            <FileDown className="w-5 h-5 group-hover:scale-110 transition-all duration-300" />
+          </a> */}
+          <a
+            href="/Aditika_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="
     group
     w-fit
