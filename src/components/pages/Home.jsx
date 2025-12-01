@@ -7,6 +7,7 @@ import KnowMeMore from "../KnowMeMore/KnowMeMore";
 import ContactMe from "../ContactMe/ContactMe";
 import WorkExperience from "../WorkExperience/WorkExperience";
 import Education from "../Education/Education";
+import Leadership from "../Leadership/Leadership";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
       <Projects />
       <WorkExperience />
       <Education />
+      <Leadership />
       <ContactMe />
 
       {/* <KnowMeMore /> */}

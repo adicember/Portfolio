@@ -8,6 +8,7 @@ import {
   Briefcase,
   GraduationCap,
   Mail,
+  Medal,
 } from "lucide-react";
 
 import { GlowingEffect } from "../ui/glowing-effect";
@@ -24,7 +25,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50">
+    <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full flex justify-center">
       <div className="relative rounded-full p-[2px]">
         <GlowingEffect
           blur={0}
@@ -41,102 +42,69 @@ function Navbar() {
             backdrop-blur-xl
             bg-[#0d0d0d]/40
             border border-white/10
-            rounded-3xl 
-            px-6 py-3
-            flex items-center gap-10
+            rounded-3xl
+            px-10 py-4 
+            flex items-center justify-center
+            gap-10 md:gap-12
             transition-all duration-300
-            shadow-[0_0_15px_rgba(255,0,255,0.15)]
+            shadow-[0_0_20px_rgba(255,0,255,0.18)]
+            max-w-[90vw] 
+            overflow-hidden
           "
         >
           {/* Desktop View */}
-          <div className="hidden md:flex gap-10 font-medium">
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_#ff1aff]"
-            >
-              About
-            </button>
-
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_#ff1aff]"
-            >
-              Skills
-            </button>
-
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_#ff1aff]"
-            >
-              Projects
-            </button>
-            <button
-              onClick={() => scrollToSection("work")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_#ff1aff]"
-            >
-              Work Experience
-            </button>
-            <button
-              onClick={() => scrollToSection("education")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_#ff1aff]"
-            >
-              Education
-            </button>
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-110 hover:drop-shadow-[0_0_8px_#ff1aff]"
-            >
-              Contact Me
-            </button>
+          <div className="hidden md:flex gap-8 lg:gap-10 font-medium whitespace-nowrap">
+            {[
+              "about",
+              "skills",
+              "projects",
+              "work",
+              "education",
+              "achievements",
+              "contact",
+            ].map((item) => (
+              <button
+                key={item}
+                onClick={() => scrollToSection(item)}
+                className="
+                  text-white/80 
+                  hover:text-pink-400 
+                  transition-all
+                  duration-200 
+                  hover:scale-110 
+                  hover:drop-shadow-[0_0_8px_#ff1aff]
+                  text-sm md:text-[15px] lg:text-base xl:text-[17px]
+                  tracking-tight
+                "
+              >
+                {item === "work"
+                  ? "Work Experience"
+                  : item.charAt(0).toUpperCase() + item.slice(1)}
+              </button>
+            ))}
           </div>
 
-          {/* Mobile View (Icons Only) */}
+          {/* Mobile Icons */}
           <div className="flex md:hidden gap-6">
-            {/* about */}
-            <button
-              onClick={() => scrollToSection("about")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
-            >
+            <button onClick={() => scrollToSection("about")} className="text-white/80 hover:text-pink-400 hover:scale-125">
               <User size={22} />
             </button>
-
-            {/* skills */}
-            <button
-              onClick={() => scrollToSection("skills")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
-            >
+            <button onClick={() => scrollToSection("skills")} className="text-white/80 hover:text-pink-400 hover:scale-125">
               <Sparkles size={18} />
             </button>
-
-            {/* projects */}
-            <button
-              onClick={() => scrollToSection("projects")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
-            >
+            <button onClick={() => scrollToSection("projects")} className="text-white/80 hover:text-pink-400 hover:scale-125">
               <FolderKanban size={22} />
             </button>
-
-            {/* work */}
-            <button
-              onClick={() => scrollToSection("work")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
-            >
+            <button onClick={() => scrollToSection("work")} className="text-white/80 hover:text-pink-400 hover:scale-125">
               <Briefcase size={18} />
             </button>
-
-            {/* education */}
-            <button
-              onClick={() => scrollToSection("education")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
-            >
+            <button onClick={() => scrollToSection("education")} className="text-white/80 hover:text-pink-400 hover:scale-125">
               <GraduationCap size={18} />
             </button>
-
-            {/* contact */}
-            <button
-              onClick={() => scrollToSection("contact")}
-              className="text-white/80 hover:text-pink-400 transition-all duration-200 hover:scale-125"
-            >
+            <button onClick={() => scrollToSection("leadership")} className="text-white/80 hover:text-pink-400 hover:scale-125">
+              <Medal size={18} />
+            </button>
+            <button onClick={() => scrollToSection("contact")} className="text-white/80 hover:text-pink-400 hover:scale-125">
               <Mail size={22} />
             </button>
           </div>
