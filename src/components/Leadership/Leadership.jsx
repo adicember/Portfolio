@@ -27,17 +27,32 @@ export default function Leadership() {
         {items.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.15 }}
-            viewport={{ once: true }}
-            className="flex items-start gap-4 p-5 rounded-xl
-                       bg-gradient-to-br from-purple-900/30 to-pink-900/20
-                       border border-pink-500/20 backdrop-blur-md
-                       hover:border-pink-500/40 hover:scale-[1.01]
-                       transition-all duration-300"
+            // initial={{ opacity: 0, x: -40 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // viewport={{ once: true, margin: "-100px" }}
+            // transition={{ duration: 0.6, delay: index * 0.15 }}
+            className="
+  relative overflow-hidden flex items-start gap-6 p-7 rounded-2xl
+  bg-gradient-to-br from-purple-900/30 to-pink-900/20
+  border border-pink-500/20 backdrop-blur-md
+  transition-all duration-300
+
+  hover:scale-[1.04] hover:-translate-y-1
+  hover:border-pink-400
+
+  before:absolute before:inset-0 before:rounded-2xl
+  before:border-2 before:border-transparent
+  before:transition-all before:duration-500
+  hover:before:border-pink-400 hover:before:shadow-[0_0_28px_rgba(255,20,147,0.6)]
+
+  after:absolute after:top-0 after:left-[-120%]
+  after:w-full after:h-full after:bg-gradient-to-r
+  after:from-transparent after:via-white/10 after:to-transparent
+  after:skew-x-[-20deg] after:transition-all after:duration-700
+  hover:after:left-[120%]
+"
           >
-            <Award className="w-7 h-7 text-pink-400 mt-1" />
+            <Award className="w-7 h-7 text-pink-400 mt-1 flex-shrink-0" />
 
             <div>
               <h3 className="text-lg font-semibold text-left">{item.title}</h3>

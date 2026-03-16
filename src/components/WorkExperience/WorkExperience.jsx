@@ -21,12 +21,10 @@ function WorkExperience() {
     },
   ];
 
-  //
-  // sort dynamically → Latest job goes first
-  //
+
   const getYear = (date) => (date === "Present" ? 9999 : parseInt(date));
   experiences = experiences.sort(
-    (a, b) => getYear(b.endDate) - getYear(a.endDate)
+    (a, b) => getYear(b.endDate) - getYear(a.endDate),
   );
 
   //
@@ -39,7 +37,7 @@ function WorkExperience() {
 
   return (
     <section id="work">
-      <div className=" bg-black text-white py-20 px-4">
+      <div className=" text-white py-20 px-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
@@ -97,14 +95,16 @@ function WorkExperience() {
                       {/* CARD */}
                       <div
                         className={`
-                        relative rounded-2xl p-6 backdrop-blur-sm border 
-                        transition-all duration-300 hover:scale-105 
-                        ${
-                          exp.isCurrent
-                            ? "bg-gradient-to-br from-pink-500 to-pink-600 border-pink-400 shadow-lg shadow-pink-500/50"
-                            : "bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700"
-                        }
-                      `}
+    relative rounded-2xl p-4 sm:p-6 backdrop-blur-sm border
+    transition-all duration-300 hover:scale-105
+    w-full sm:w-[360px] md:w-[400px]
+    min-h-[220px] sm:min-h-[260px] md:h-[300px]
+    ${
+      exp.isCurrent
+        ? "bg-gradient-to-br from-pink-500 to-pink-600 border-pink-400 shadow-lg shadow-pink-500/50"
+        : "bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700"
+    }
+  `}
                       >
                         {/* Only for latest job : remove if no job*/}
                         {exp.isCurrent && (
@@ -129,14 +129,14 @@ function WorkExperience() {
                         </div>
 
                         <h3
-                          className={`text-xl font-bold mb-1 ${
+                          className={`text-2xl font-bold mb-2 ${
                             exp.isCurrent ? "text-white" : "text-pink-400"
                           }`}
                         >
                           {exp.title}
                         </h3>
 
-                        <p className="font-medium mb-4 text-white">
+                        <p className="text-xl mb-9 text-white ">
                           {exp.company}
                         </p>
 
@@ -148,7 +148,7 @@ function WorkExperience() {
                             }`}
                           />
                           <span
-                            className={`text-sm ${
+                            className={`text-lg ${
                               exp.isCurrent ? "text-white" : "text-gray-400"
                             }`}
                           >
@@ -164,7 +164,7 @@ function WorkExperience() {
                             }`}
                           />
                           <span
-                            className={`text-sm ${
+                            className={`text-lg ${
                               exp.isCurrent ? "text-white" : "text-gray-400"
                             }`}
                           >

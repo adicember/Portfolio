@@ -25,9 +25,8 @@ export default function Education() {
       className=" flex flex-col items-center justify-center px-6 py-20 bg-black text-white"
     >
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="text-center "
       >
@@ -43,8 +42,7 @@ export default function Education() {
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.15 }}
             className="relative bg-gradient-to-br from-purple-900/30 to-pink-900/20 p-8 rounded-3xl backdrop-blur-lg border-2 border-pink-500/30 hover:border-pink-500/60 transition-all duration-300"
           >

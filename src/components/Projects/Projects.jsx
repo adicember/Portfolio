@@ -23,9 +23,9 @@ const projectsData = [
     showLink: false,
   },
   {
-    title: "Arogya: PCOS Detection",
+    title: "Arogya: PCOS Diagnosis",
     description:
-      "Arogya is a PCOS detection system that analyzes ovarian ultrasound images using a MobileNet deep learning model to classify whether a patient is affected or not.",
+      "Arogya is a PCOS diagnosis system that analyzes ovarian ultrasound images using a MobileNet deep learning model to classify whether a patient is affected or not.",
     image: arogya,
     tech: ["React JS", "Tailwind CSS", "Python"],
     link: "https://github.com/adicember/Arogya",

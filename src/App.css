@@ -7,6 +7,16 @@
   pointer-events: none;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #000000 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #ffffff;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -32,7 +42,51 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* Single continuous gradient background for entire page (except hero) */
+body {
+  background: linear-gradient(180deg, #000000 0%, #000000 10%, #0f0a12 50%, #0a0a0a 100%);
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 30% 50%, rgba(168, 85, 247, 0.04) 0%, transparent 50%),
+    radial-gradient(ellipse at 70% 75%, rgba(236, 72, 153, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  background-color: #000000;
+}
+
+/* Remove black backgrounds from all sections except hero */
+#skills,
+#projects,
+#work,
+#education,
+#leadership,
+#contact {
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Remove black backgrounds from all sections except hero */
+#skills,
+#projects,
+#work,
+#education,
+#leadership,
+#contact {
+  background: transparent !important;
+  position: relative;
+  z-index: 1;
 }
