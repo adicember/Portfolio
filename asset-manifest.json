@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5df3ee47.css",
+    "main.js": "/static/js/main.aadfe19c.js",
+    "static/js/453.ececc0a5.chunk.js": "/static/js/453.ececc0a5.chunk.js",
+    "static/media/Arogya.png": "/static/media/Arogya.932d3ddd27237f653435.png",
+    "static/media/ICTv8.png": "/static/media/ICTv8.76de30863c5715586dce.png",
+    "static/media/Hackaverse.png": "/static/media/Hackaverse.e859ae55a05d9046d0c0.png",
+    "static/media/Swachyan.png": "/static/media/Swachyan.b6d4880ea8b4396a3531.png",
+    "static/media/Aditika_Singh_CV.pdf": "/static/media/Aditika_Singh_CV.3c59e460c1157cfac793.pdf",
+    "static/media/webgis.png": "/static/media/webgis.2128c9101df316c090ae.png",
+    "static/media/zustand-original-512px.png": "/static/media/zustand-original-512px.e21d9956f936ce99d67a.png",
+    "static/media/esewa.png": "/static/media/esewa.4e0c9cc809fedb77d798.png",
+    "static/media/react-js-icon.png": "/static/media/react-js-icon.ee213620508c24a8f129.png",
+    "static/media/gitlab-icon.png": "/static/media/gitlab-icon.381a4c1e1102a1eb0415.png",
+    "static/media/css-icon.png": "/static/media/css-icon.01102b1fc8cd7b532d57.png",
+    "static/media/jest-js-icon.png": "/static/media/jest-js-icon.8837ff9a43286e8d3de9.png",
+    "static/media/github-icon.png": "/static/media/github-icon.abe880dee4c469326976.png",
+    "static/media/html-icon.png": "/static/media/html-icon.d7a66e72bd28e2150f16.png",
+    "static/media/javascript-programming-language-icon.png": "/static/media/javascript-programming-language-icon.d14cb0a1974948505a27.png",
+    "static/media/git-icon.png": "/static/media/git-icon.319eb81a5ca38acbcb8c.png",
+    "static/media/storybook-icon.png": "/static/media/storybook-icon.2972ef6b53a9bf853e9a.png",
+    "static/media/figma-icon.png": "/static/media/figma-icon.2be2eebce534c461997f.png",
+    "static/media/postman-icon.png": "/static/media/postman-icon.61c4d357fb4129858e00.png",
+    "index.html": "/index.html",
+    "main.5df3ee47.css.map": "/static/css/main.5df3ee47.css.map",
+    "main.aadfe19c.js.map": "/static/js/main.aadfe19c.js.map",
+    "453.ececc0a5.chunk.js.map": "/static/js/453.ececc0a5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5df3ee47.css",
+    "static/js/main.aadfe19c.js"
+  ]
+}
