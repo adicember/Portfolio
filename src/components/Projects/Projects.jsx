@@ -6,22 +6,22 @@ import hackaversev2 from "../../Assets/img/Hackaverse.png";
 import webgis from "../../Assets/img/webgis.png";
 import esewa from "../../Assets/img/esewa.png";
 const projectsData = [
-  {
-    title: "BizMap : Web GIS Platform",
-    description:
-      "A Web GIS platform with interactive maps, financial and hazard visualizations, role-based user management, and location plotting through file uploads.",
-    image: webgis,
-    tech: ["React JS", "Tailwind CSS", "MapLibre"],
-    showLink: false,
-  },
-  {
-    title: "eSewa Area Representative System",
-    description:
-      "The eSewa Area Representative System manages field operations, including task assignment, QR-based merchant enrollment, and real-time route tracking. It enables ARs, Supervisors, and Admins to monitor activities, verify merchants, and generate reports efficiently.",
-    image: esewa,
-    tech: ["React JS", "Tailwind CSS", "MapLibre"],
-    showLink: false,
-  },
+  // {
+  //   title: "BizMap : Web GIS Platform",
+  //   description:
+  //     "A Web GIS platform with interactive maps, financial and hazard visualizations, role-based user management, and location plotting through file uploads.",
+  //   image: webgis,
+  //   tech: ["React JS", "Tailwind CSS", "MapLibre"],
+  //   showLink: false,
+  // },
+  // {
+  //   title: "eSewa Area Representative System",
+  //   description:
+  //     "The eSewa Area Representative System manages field operations, including task assignment, QR-based merchant enrollment, and real-time route tracking. It enables ARs, Supervisors, and Admins to monitor activities, verify merchants, and generate reports efficiently.",
+  //   image: esewa,
+  //   tech: ["React JS", "Tailwind CSS", "MapLibre"],
+  //   showLink: false,
+  // },
   {
     title: "Arogya: PCOS Diagnosis",
     description:
