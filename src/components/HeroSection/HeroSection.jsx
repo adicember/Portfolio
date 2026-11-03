@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Socialmedia from "./Socialmedia";
 import { FileDown } from "lucide-react";
 import CV from "../../Assets/pdf/Aditika_Singh_CV.pdf";
+import AditikaCharacter from "../Threejsartifacts/AditikaCharacter";
 function HeroSection() {
   const [screenKey, setScreenKey] = useState(0);
 
@@ -25,10 +26,10 @@ function HeroSection() {
         rangeY={800}
         particleCount={300}
         baseHue={270}
-        className="w-full h-full flex flex-col-reverse md:flex-row items-center justify-between max-w-7xl mx-auto py-10"
+        className="w-full h-full flex flex-col md:flex-row items-center justify-between gap-8 max-w-7xl mx-auto py-10"
       >
         {/* Left Side */}
-        <div className="w-full flex flex-col items-center text-center gap-4 mt-10">
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center gap-4 mt-10">
           {/* Animated Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +48,7 @@ function HeroSection() {
             className="text-gray-300 text-lg sm:text-xl max-w-xl leading-relaxed flex"
           >
             <span>
-              As a front-end engineer, I craft clean, modular, and scalable user
+              As a software engineer, I craft clean, modular, and scalable user
               interfaces using modern web technologies. I focus on usability,
               responsiveness, and performance to deliver seamless digital
               experiences.<span className="cursor-line">|</span>
@@ -102,6 +103,11 @@ function HeroSection() {
             Download CV
             <FileDown className="w-5 h-5 group-hover:scale-110 transition-all duration-300" />
           </a>
+        </div>
+
+        {/* Right Side */}
+        <div className="w-full md:w-1/2 h-[420px] md:h-[600px] rounded-2xl overflow-hidden">
+          <AditikaCharacter />
         </div>
       </Vortex>
     </section>

@@ -5,11 +5,11 @@ function WorkExperience() {
   let experiences = [
     {
       id: 3,
-      title: "Junior Frontend Engineer",
+      title: "Frontend Engineer",
       company: "Galli Maps",
       startDate: "November 2024",
       endDate: "Present",
-      location: "Surya Bikram Marg, Kathmandu",
+      location: "Pulchowk, Kathmandu",
     },
     {
       id: 2,
