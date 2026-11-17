@@ -161,7 +161,7 @@ function ContactMe() {
             opportunities. Whether you have a question or just want to say hi,
             feel free to drop me a message.
           </motion.p>
-
+{/* 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -172,7 +172,7 @@ function ContactMe() {
               <Mail className="w-5 h-5 text-pink-400" />
             </div>
             <span>aditikasingh2001@gmail.com</span>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

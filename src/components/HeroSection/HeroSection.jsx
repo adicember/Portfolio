@@ -37,6 +37,9 @@ function HeroSection() {
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight"
           >
             Hi, I'm <span className="text-pink-400">Aditika Singh!</span>
+            <span className="block text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-200 mt-2">
+              Software Engineer
+            </span>
           </motion.h1>
 
           {/* Typewriter Role Animation */}
@@ -47,10 +50,9 @@ function HeroSection() {
             className="text-gray-300 text-lg sm:text-xl max-w-xl leading-relaxed flex"
           >
             <span>
-              As a front-end engineer, I craft clean, modular, and scalable user
-              interfaces using modern web technologies. I focus on usability,
-              responsiveness, and performance to deliver seamless digital
-              experiences.<span className="cursor-line">|</span>
+              I build clean, scalable web applications with a frontend focus,
+              from polished interfaces to the backend services behind
+              them.<span className="cursor-line">|</span>
             </span>
 
             {/* Cursor */}

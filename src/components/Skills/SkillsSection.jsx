@@ -13,6 +13,11 @@ import Postman from "../../Assets/img/postman-icon.png";
 import Jest from "../../Assets/img/jest-js-icon.png";
 import Storybook from "../../Assets/img/storybook-icon.png";
 import Zustand from "../../Assets/img/zustand-original-512px.png";
+import NextJs from "../../Assets/img/nextjs-icon.svg";
+import ThreeJs from "../../Assets/img/threejs-icon.svg";
+import NodeJs from "../../Assets/img/nodejs-icon.svg";
+import Python from "../../Assets/img/python-icon.svg";
+import Sql from "../../Assets/img/sql-icon.svg";
 
 function SkillsSection() {
   const allSkills = [
@@ -20,6 +25,11 @@ function SkillsSection() {
     { name: "CSS", img: cssimg },
     { name: "Javascript", img: jsimg },
     { name: "React JS", img: reactimg },
+    { name: "Next JS", img: NextJs },
+    { name: "Three JS", img: ThreeJs },
+    { name: "Node JS", img: NodeJs },
+    { name: "Python", img: Python },
+    { name: "SQL", img: Sql },
     { name: "Tailwind CSS", img: tailwindimg },
     { name: "Material UI", img: mui },
     { name: "Git", img: Git },
